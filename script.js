@@ -1,4 +1,4 @@
-// ===== Storage =====
+
 const STORAGE_KEY = "lumen_data";
 const TAGS = ["AI", "Coding", "Cloud", "Design", "Business", "Science", "Math", "Other"];
 
@@ -16,13 +16,13 @@ function extractYouTubeId(url) {
   return m ? m[1] : null;
 }
 
-// ===== State =====
+
 let learnings = getLearnings();
 let selectedTag = "Coding";
 let activeFilter = null;
 let searchQuery = "";
 
-// ===== Init =====
+
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("footer-year").textContent = new Date().getFullYear();
   renderTagButtons();
@@ -32,12 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
   updateHeroSubtitle();
 });
 
-// ===== Scroll =====
+
 function scrollToSection(id) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 }
 
-// ===== Hero =====
+
 function updateHeroSubtitle() {
   const el = document.getElementById("hero-subtitle");
   el.textContent = learnings.length > 0
@@ -45,7 +45,7 @@ function updateHeroSubtitle() {
     : "Your knowledge repository";
 }
 
-// ===== Input =====
+
 function handleFetch() {
   const url = document.getElementById("url-input").value.trim();
   if (!url) return;
@@ -97,7 +97,6 @@ function handleSave() {
   updateHeroSubtitle();
 }
 
-// ===== Tags =====
 function renderTagButtons() {
   const container = document.getElementById("tag-buttons");
   container.innerHTML = TAGS.map(t =>
@@ -110,7 +109,6 @@ function selectTag(t) {
   renderTagButtons();
 }
 
-// ===== Filter Tags =====
 function renderFilterTags() {
   const container = document.getElementById("filter-tags");
   let html = '<button class="filter-btn' + (!activeFilter ? ' active' : '') + '" onclick="setFilter(null)">All</button>';
@@ -131,7 +129,6 @@ function filterLearnings() {
   renderCards();
 }
 
-// ===== Cards =====
 function renderCards() {
   const grid = document.getElementById("cards-grid");
   const filtered = learnings.filter(l => {
@@ -178,11 +175,11 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
-// ===== Analytics =====
+
 function updateAnalytics() {
   document.getElementById("stat-total").textContent = learnings.length;
 
-  // This week
+ 
   const now = new Date();
   const weekData = [0, 0, 0, 0, 0, 0, 0];
   const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -196,11 +193,10 @@ function updateAnalytics() {
   const thisWeek = weekData.reduce((a, b) => a + b, 0);
   document.getElementById("stat-week").textContent = thisWeek;
 
-  // Streak
+
   const streak = getStreak();
   document.getElementById("stat-streak").textContent = streak;
 
-  // Chart
   renderChart(dayNames, weekData);
 }
 
