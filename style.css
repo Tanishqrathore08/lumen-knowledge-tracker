@@ -46,7 +46,6 @@ h1, h2, h3, h4 {
 
 .hidden { display: none !important; }
 
-/* Glass & Shadows */
 .glass-surface {
   background: hsla(240,33%,97%,0.8);
   backdrop-filter: blur(24px);
@@ -68,7 +67,7 @@ h1, h2, h3, h4 {
   background-clip: text;
 }
 
-/* ===== NAVBAR ===== */
+
 #navbar {
   position: fixed;
   top: 0;
@@ -148,7 +147,6 @@ h1, h2, h3, h4 {
 
 .nav-cta:hover { opacity: 0.9; }
 
-/* ===== HERO ===== */
 #hero {
   position: relative;
   min-height: 80vh;
@@ -227,7 +225,7 @@ h1, h2, h3, h4 {
 .hero-btn:hover { transform: scale(1.03); }
 .hero-btn:active { transform: scale(0.98); }
 
-/* ===== INPUT SECTION ===== */
+
 .input-wrapper {
   max-width: 42rem;
   margin: 0 auto;
@@ -380,7 +378,6 @@ h1, h2, h3, h4 {
 .save-btn:hover { opacity: 0.9; }
 .save-btn:active { transform: scale(0.98); }
 
-/* ===== DASHBOARD ===== */
 .dashboard-header {
   display: flex;
   flex-direction: column;
@@ -468,7 +465,6 @@ h1, h2, h3, h4 {
 .empty-title { font-size: 1.125rem; font-weight: 500; }
 .empty-sub { font-size: 0.875rem; margin-top: 0.25rem; }
 
-/* Learning Card */
 .learning-card {
   background: var(--card);
   border-radius: 1.5rem;
@@ -643,7 +639,7 @@ h1, h2, h3, h4 {
   color: var(--muted);
 }
 
-/* ===== FOOTER ===== */
+
 .site-footer {
   padding: 3rem 0;
   text-align: center;
