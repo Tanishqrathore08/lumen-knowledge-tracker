@@ -5,10 +5,6 @@ Lumen is a web-based knowledge tracking application that helps you capture, orga
 
 It allows users to save insights from YouTube videos and articles, organize them with tags, and track learning progress through simple analytics.
 
-🌐 Live Demo
-
-👉 (Add your GitHub Pages link here)
-
 💡 Why I Built This
 
 While learning from YouTube and articles, I realized most people consume content but don’t retain it.
@@ -41,9 +37,7 @@ Tag-based filtering
 Clean UI layout
 
 📈 Analytics
-
 Tracks your learning behavior:
-
 Total insights saved
 Weekly activity
 Daily streak system
@@ -56,6 +50,7 @@ Daily streak system
 📊 Learning analytics dashboard
 💾 Local storage (no login required)
 🎨 Clean modern UI with animations
+
 🧠 Core Concepts Used
 JavaScript DOM manipulation
 Local Storage (data persistence)
@@ -90,9 +85,6 @@ CSS
 JavaScript
 
 ▶️ How to Run Locally
-git clone <your-repo-link>
-cd lumen
 open index.html
-🎯 Short Description (for recruiters)
 
 Lumen is a web-based knowledge tracking application that allows users to save and organize insights from online content like YouTube videos and articles. It uses local storage for data persistence and provides analytics like learning streaks and weekly activity.
